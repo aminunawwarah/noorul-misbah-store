@@ -1,0 +1,132 @@
+<!--
+    Copyright 2023, Aminu Adamu Aminu
+    All rights reserved.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noorul Misbah</title>
+
+    <!--CSS Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/animations.css">
+    <link rel="stylesheet" href="stylesheets/fonts-families.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/devices.css">
+    <link rel="stylesheet" href="stylesheets/images-swipe.css">
+
+    <!--JavaScript Scripts-->
+    <script defer src="scripts/items.js"></script>
+    <script defer src="scripts/images-swipe.js"></script>
+    <script defer src="scripts/devices.js"></script>
+    <script defer src="scripts/index.js"></script>
+</head>
+<body>
+    <header>
+        <img draggable="false" class="site-logo" src="imgs/Noor-logo.png" alt="Site Logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="device-pages/page-1.html">Shopping</a>
+            <a href="#contact">Contact</a>
+            <img draggable="false" class="close-menu-icon" src="imgs/close.png" alt="Close menu icon">
+        </nav>
+        <img draggable="false" class="menu-icon" src="imgs/menu.png" alt="Menu icon">
+    </header>
+    <div class="cover-image">
+        <div class="cover-content">
+            <p class="cover-description">
+                WELCOME TO NOORUL MISBAH <br>
+                <span>Buy the cheapest mobile phones, tablets, and PCs.</span>
+            </p>
+        </div>
+    </div>
+    <!--The content of this section is injected using JavaScript. The devices are fetched from an array.
+    Each device can be viewed by clicking the 'More Info' button which is part of the device card.-->
+    <section id="home">
+        <div class="section-content devices">
+            
+        </div>
+        <div class="device-information">
+            
+        </div>
+    </section>
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="section-content">
+            <div class="left-content">
+                <h3>Why Shop Here?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet.</p>
+                <h3>Want discounts?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet.</p>
+                <h3>Guranteed Quality Products</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="right-content">
+                <img class="observe" draggable="false" src="imgs/IPhone 14 Pro Max.png" alt="Sample image">
+            </div>
+        </div>
+    </section>
+    <section id="products">
+        <h2 class="section-title">Our Products</h2>
+        <div class="section-content">
+            <p>We sell mobile phones, tablets, and PCs at affordable prices.</p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, ipsa.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, doloremque.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quasi temporibus dicta!
+            </p>
+            <p>Below are some of our products. Swipe the cards or click the arrow buttons.</p>
+        </div>
+        <div class="images-swipe-container">
+            <p class="scroll-left">&lt;</p>
+            <div class="images-swipe">
+                <div class="card">
+                    <img draggable="false" class="card-image" src="imgs/Nokia Lumia 830.png" alt="Nokia 830">
+                    <p class="card-device-name">Nokia Lumia 830</p>
+                    <p>By Nokia</p>
+                </div>
+                <div class="card">
+                    <img draggable="false" class="card-image" src="imgs/Nokia 9.2.png" alt="Nokia 9.2">
+                    <p class="card-device-name">Nokia 9.2</p>
+                    <p>By Nokia</p>
+                </div>
+                <div class="card">
+                    <img draggable="false" class="card-image" src="imgs/Pipo W10.png" alt="Pipo">
+                    <p class="card-device-name">Pipo W10</p>
+                    <p>By Pipo</p>
+                </div>
+                <div class="card">
+                    <img draggable="false" class="card-image" src="imgs/Dell XPS 13.png" alt="De;; XPS">
+                    <p class="card-device-name">Dell XPS 13</p>
+                    <p>By Dell</p>
+                </div>
+                <div class="card">
+                    <img draggable="false" class="card-image" src="imgs/IPhone 14 Pro Max.png" alt="iPhone 14">
+                    <p class="card-device-name">iPhone 14 Pro Max</p>
+                    <p>By Apple</p>
+                </div>
+            </div>
+            <p class="scroll-right">&gt;</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="section-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae a officia explicabo, quam at 
+                et aliquam necessitatibus totam, reiciendis cumque voluptatem? Voluptate similique nemo est 
+                deserunt sunt unde, harum ducimus?
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Aminu Adamu Aminu</p>
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+</html>

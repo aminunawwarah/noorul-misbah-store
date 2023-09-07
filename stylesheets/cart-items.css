@@ -1,0 +1,86 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+.cart-items {
+    position: fixed;
+    width: 18rem;
+    max-height: 75vh;
+    background: #F7F7F7D0;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    z-index: 1;
+    transform: scale(0);
+    overflow-y: scroll;
+    transition: var(--transition);
+}
+
+.cart-items::-webkit-scrollbar {
+    display: none;
+}
+
+.cart-items p {
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--darkOrange);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-image {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+.cart-item button {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.7rem;
+    margin-top: 0;
+}
+
+.make-payment-form {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.7rem;
+}
+
+.remove-item-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    background: #E32525;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: 1px solid #272626;
+    padding: 0.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.remove-item-icon:hover {
+    background: var(--white);
+}
+
+.close-cart-items {
+    position: fixed;
+    right: 5%;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-cart-items:hover {
+    transform: rotate(90deg);
+}

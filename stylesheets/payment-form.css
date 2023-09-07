@@ -1,0 +1,59 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+.payment-form {
+    position: fixed;
+    left: calc((100% / 2) - 8rem);
+    top: calc((100% / 2) - 14rem);
+    background: white;
+    border: 1px solid #997245;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    width: 18rem;
+    transform: scale(0);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--darkOrange);
+    border-radius: 5px;
+    outline: none;
+    font-family: Nunito, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: inherit;
+}
+
+h2 {
+    text-align: center;
+}
+
+.payment-form p {
+    margin: 1rem 0;
+    font-size: inherit;
+}
+
+.payment-form button {
+    width: 5rem;
+    height: 2rem;
+    font-size: inherit;
+    margin-top: 0.5rem;
+}
+
+.close-payment-form-icon {
+    position: fixed;
+    width: 1rem;
+    height: 1rem;
+    right: 5%;
+    cursor: pointer; 
+    transition: var(--transition);
+}
+
+.close-payment-form-icon:hover {
+    transform: rotate(90deg);
+}

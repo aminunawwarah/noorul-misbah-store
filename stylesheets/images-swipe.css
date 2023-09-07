@@ -1,0 +1,151 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+.images-swipe-container {
+    position: relative;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.images-swipe {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 15px;
+    user-select: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+}
+
+.images-swipe::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    border: 1px solid var(--darkBlue);
+    border-radius: 5px;
+    padding: 1rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--arsh);
+    cursor: grab;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card-image {
+    width: 10rem;
+    height: 10rem;
+    transition: var(--transition);
+}
+
+.card-device-name {
+    font-weight: bold;
+}
+
+.scroll-right,
+.scroll-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #675588;
+    border: 2px solid #162453;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 0.4rem;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+    background: var(--lightBlue);
+    width: 2.8rem;
+    height: 2.8rem;
+    padding-top: 0.6rem;
+}
+
+.scroll-right {
+    right: 2rem;
+}
+
+.scroll-left {
+    left: 2rem;
+}
+
+@media screen and (max-width: 1225px) {
+    .card-image {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .images-swipe {
+        grid-auto-columns: calc((100% / 2) - 10px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .images-swipe {
+        grid-auto-columns: calc(100%);
+    }
+
+    .card-image {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .scroll-right,
+    .scroll-left {
+        width: 2rem;
+        height: 2rem;
+        padding-top: 0.2rem;
+    }
+
+    .scroll-right:hover,
+    .scroll-left:hover {
+        width: 2.2rem;
+        height: 2.2rem;
+        padding-top: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .images-swipe {
+        grid-auto-columns: calc(100%);
+    }
+
+    .card-image {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .images-swipe {
+        grid-auto-columns: calc(100%);
+    }
+
+    .card-image {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+

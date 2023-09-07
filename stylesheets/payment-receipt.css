@@ -1,0 +1,66 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+.transaction-receipt {
+    position: fixed;
+    background: #E7E7E7;
+    width: 27rem;
+    max-height: 95vh;
+    padding: 1rem;
+    left: calc((100% / 2) - 15rem);
+    top: 1rem;
+    z-index: 2;
+    transform: scale(0);
+    overflow-y: auto;
+    transition: var(--transition);
+}
+
+.transaction-receipt::-webkit-scrollbar {
+    display: none;
+}
+
+.transaction-receipt div {
+    margin-bottom: 1rem;
+}
+
+.receipt-head,
+.customer-address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-head-image {
+    width: 5rem;
+    height: 5rem;
+}
+
+.head-description {
+    align-self: center;
+}
+
+.head-description p,
+.address p,
+td {
+    font-size: 0.8rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 0.3rem;
+}
+
+thead {
+    background: var(--lightOrange);
+    border-color: #818128;
+    color: #FFFFFF;
+}
+
+.center {
+    text-align: center;
+}

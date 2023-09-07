@@ -1,0 +1,77 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+.devices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.buttons {
+    align-self: flex-start;
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    width: 13rem;
+    background: #B3B3B3;
+    padding: 1rem;
+    border: 2px solid var(--darkBlue);
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.device-information {
+    position: fixed;
+    left: calc((100% / 2) - 8rem);
+    top: calc((100% / 2) - 13rem);
+    background: white;
+    border: 1px solid #997245;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 18rem;
+    transform: scale(0);
+    transition: var(--transition);
+}
+
+.device-information img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.device-information p {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+}
+
+.buttons button {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.6rem;
+}
+
+.device-image {
+    width: 10rem;
+    height: 10rem;
+}
+
+.device-name {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#close-information-icon {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    right: -95%;
+    cursor: pointer; 
+    transition: var(--transition);
+}
+
+#close-information-icon:hover {
+    transform: rotate(90deg);
+}

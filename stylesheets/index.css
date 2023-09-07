@@ -1,0 +1,289 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/* Define some variables */
+:root {
+    --darkBlue: #123444;
+    --lightBlue: #558399;
+    --silver: #C0C0C0;
+    --arsh: #808080;
+    --white: #FFFFFF;
+    --transition: 0.5s ease all;
+    --padding: 0.4rem 6rem;
+}
+
+@keyframes animateUp {
+    0% {
+        transform: translateY(3rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Verdana, 'Segoe UI';
+    font-size: 20px;
+}
+
+body {
+    background: var(--silver);
+}
+
+header {
+    position: relative;
+    background: var(--darkBlue);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    padding: var(--padding);
+    margin: 1rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+button {
+    background: var(--darkBlue);
+    color: var(--white);
+    font-family: inherit;
+    border: 1px solid #592379;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 7rem;
+    height: 2.5rem;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: var(--silver);
+    color: var(--darkBlue);
+}
+
+nav {
+    margin-top: 0.6rem;
+    transition: var(--transition);
+}
+
+nav a {
+    padding: 0.3rem 1rem;
+    text-decoration: none;
+    color: var(--white);
+    border: 2px solid var(--darkBlue);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background: var(--lightBlue);
+    border-color: #452394;
+}
+
+footer {
+    padding: 10rem 0 1rem 0;
+    background: var(--arsh);
+    text-align: center;
+}
+
+#about {
+    background: #728088;
+}
+
+#about .section-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-logo {
+    width: 15rem;
+    height: 3rem;
+}
+
+.menu-icon,
+.cart-icon,
+.close-menu-icon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icon,
+.close-menu-icon {
+    top: 1rem;
+    right: 1rem;
+}
+
+.close-menu-icon {
+    width: 1.4rem;
+    height: 1.4em;
+    transition: var(--transition);
+}
+
+.close-menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+.cart-icon {
+    display: block;
+    right: 3rem;
+}
+
+.cover-image {
+    position: relative;
+    background: url('../imgs/cover-image.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 85vh;
+}
+
+.cover-content {
+    position: absolute;
+    top: 0;
+    padding: var(--padding);
+    background: #C0C0C060;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover-description {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: var(--silver)
+}
+
+.cover-description span {
+    font-size: 2rem;
+    font-family: Nunito, Verdana, 'Segoe UI';
+    color: var(--darkBlue);
+}
+
+.section-title {
+    text-align: center;
+    border-bottom: 2px solid var(--darkBlue);
+    font-size: 2rem;
+    font-family: Nunito, Verdana, 'Segoe UI';
+}
+
+.section-content {
+    margin: 1rem;
+}
+
+.left-content {
+    width: 50%;
+}
+
+.left-content h3 {
+    font-size: 1.2rem;
+}
+
+.right-content img {
+    width: 15rem;
+    height: auto;
+}
+
+.observe {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.7s ease all;
+    animation: animateUp 0.7s linear;
+}
+
+@media screen and (max-width: 1320px) {
+    .site-logo {
+        width: 12rem;
+        height: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .close-menu-icon,
+    .menu-icon {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        z-index: 1;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-120rem);
+        right: 1rem;
+        background: var(--darkBlue);
+        padding: 1.5rem 0.5rem 1rem 0.5rem;
+    }
+     
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    nav a:hover {
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .cover-description {
+        font-size: 2rem;
+    }
+
+    .cover-description span {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .cover-description {
+        font-size: 1.6rem;
+    }
+
+    header, 
+    section,
+    .cover-content {
+        padding: 0.3rem 3rem;
+    }
+
+    .cover-description span {
+        font-size: 1.2rem;
+    }
+
+    #about .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .cover-image {
+        height: 95vh;
+        background-size: cover;
+    }
+}
