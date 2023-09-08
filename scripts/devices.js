@@ -1,5 +1,14 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
 const devices = document.querySelector('.devices');
 
+/*
+* Show devices on the homepage
+* When the homepage loads, some devices will show. This function iterates the items array and display 6 devices.
+*/
 function showDevices() {
     devices.innerHTML = '';
 
@@ -15,6 +24,11 @@ function showDevices() {
     }
 }
 
+/*
+* Show the information of the device
+* The information of the device can be viewed by clicking the 'X' button at the top right corner of the dialog
+* box.
+*/
 function showDeviceInformation(index) {
     deviceInformation.innerHTML = `
         <div>
@@ -34,6 +48,10 @@ function showDeviceInformation(index) {
     deviceInformation.style.transform = 'scale(1)';
 }
 
+/*
+* Close the device information dialog
+* By clicking the 'X' icon, the device information dialog will disappear.
+*/
 function closeDeviceInformation() {
     deviceInformation.style.transform = 'scale(0)';
 }

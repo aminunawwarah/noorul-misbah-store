@@ -95,7 +95,7 @@ section {
 
 .cover-image {
     height: 85vh;
-    background: url('../imgs/store-interior.jpeg');
+    background-image: url('../imgs/store-interior.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

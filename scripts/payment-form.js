@@ -1,3 +1,14 @@
+/**
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/**
+* Show the payment form
+* When the user clicks the Pay button in the shopping cart, the payment form will appear.
+* The user will have to fill all the fields in the form before seeing the preview of
+* the transaction receipt.
+*/
 function showPaymentForm() {
     paymentForm.innerHTML = `
         <img class="close-payment-form-icon" draggable="false" src="../imgs/close.png" alt="Close icon">
@@ -12,6 +23,9 @@ function showPaymentForm() {
         <button pay>Pay</button>`
 }
 
+/**
+* Assign the field values to variables
+*/
 function assignFieldValues() {
     closePaymentFormIcon = document.querySelector('.close-payment-form-icon');
     payButton = document.querySelector('[pay]');
@@ -23,6 +37,10 @@ function assignFieldValues() {
     customerAddressField = document.querySelector('[customer-address]');
 }
 
+/**
+ * Assign customer information
+ * The field values in the payment form will be collected.
+ */
 function assignCustomerInformation() {
     customerInformation = {
         customerName: customerNamefield.value,
@@ -34,6 +52,12 @@ function assignCustomerInformation() {
     };
 }
 
+/**
+ * Validate the form
+ * When the user clicks the Pay button on the payment form, form validation will take place. This is to 
+ * ensure that all the fields in the form are filled. If any field is not filled, the user will be prompted
+ * to fill all the fields.
+ */
 function validateForm() {
     const inputFields = document.querySelectorAll('[form-input]');
     

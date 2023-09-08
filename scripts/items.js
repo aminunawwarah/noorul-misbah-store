@@ -1,3 +1,11 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/*
+* All the device information for this project are obtained from this array.
+*/
 const items = [
     { itemId: 01, itemPrice: 734, remaining: 23, itemName: 'Dell XPS 13', src: 'imgs/Dell XPS 13.png', os: 'Windows 11', osDev: 'Microsoft', type: 'PC', itemDev: 'Dell' },
     { itemId: 02, itemPrice: 810, remaining: 13, itemName: 'HP 200 G4 22', src: 'imgs/Hp 200 g4 22.png', os: 'Windows 10', osDev: 'Microsoft', type: 'PC', itemDev: 'Hewlett Packard' },

@@ -1,3 +1,14 @@
+/**
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/**
+ * Create the content of the transaction receipt
+ * This function creates a preview of the transaction receipt. The transaction receipt preview contains the
+ * details entered in the payment form, and all the items purchased together with their quantity, initial price,
+ * total price, the sum of the prices of all the items purchased. The information is presented in a table.
+ */
 function createTransactionReceiptContent() {
     const {customerName, customerCountry, customerPhone, customerTown, customerEmail, customerAddress} = customerInformation;
     const transactionTable = document.createElement('table');
@@ -66,10 +77,19 @@ function createTransactionReceiptContent() {
     });
 }
 
+/**
+ * Show the preview of the transaction receipt
+ * Once the payment form is validated, the preview of the receipt will be shown.
+ */
 function showTransactionReceipt() {
     createTransactionReceiptContent();
 }
 
+/**
+ * Create the table rows
+ * These are the table rows that will appear in the table in the PDF document of the 
+ * transaction receipt.
+ */
 function createTableRows() {
     for (var i = 0; i < cartContent.length; i++) {
         var {itemName, quantity, price, itemPrice} = {...cartContent[i]};
@@ -77,6 +97,14 @@ function createTableRows() {
     }
 }
 
+/**
+ * Download the transaction receipt
+ * The transaction receipt is downloaded. It's content is very similar to what is seen in the receipt
+ * preview. A JavaScript library is used to create the PDF document. The library is jsPDF library.
+ * The html2canvas library was initially used. But the library does not show overflow content. To solve this issue,
+ * each and every element of the receipt is inserted into the PDF manually. For the table, the jsPDF plugin was
+ * used. The table content were created using the createTableRows() function.
+ */
 function downloadTransactionReceipt() {
     var file = new jsPDF();
     const {customerName, customerCountry, customerPhone, customerTown, customerEmail, customerAddress} = customerInformation;

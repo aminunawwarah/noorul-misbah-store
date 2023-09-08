@@ -1,3 +1,12 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/*
+* Show the information of a device
+* This function shows the information of a device when the user clicks the 'More Info' button of the device card.
+*/
 function showDeviceInformation(index) {
     deviceInformation.innerHTML = `
         <div>
@@ -20,6 +29,11 @@ function showDeviceInformation(index) {
     deviceInformation.style.transform = 'scale(1)';
 }
 
+/*
+* Close the device information
+* The device information can be closed by clicking the 'X' icon on the top right corner of the dialog box
+* showing the information of the device.
+*/
 function closeDeviceInformation() {
     deviceInformation.style.transform = 'scale(0)';
 }

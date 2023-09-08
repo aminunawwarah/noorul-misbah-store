@@ -1,3 +1,13 @@
+/*
+* Copyright 2023, Aminu Adamu Aminu
+* All rights reserved. 
+*/
+
+/*
+* Toggle the navigation menu
+* When the user clicks the menu icon, the navigation menu will appear. But when the close icon is clicked, 
+* the navigation menu will disappear.
+*/
 function toggleMenu(arg) {
     if (arg === 'show')
         sitePrimaryNav.style.transform = 'translateY(0)';
@@ -6,6 +16,10 @@ function toggleMenu(arg) {
 
 }
 
+/*
+* Set an intersection observer
+* When the user scrolls down the page, the intersection observer will make the device cards appear.
+*/
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -20,6 +34,10 @@ const observer = new IntersectionObserver((entries) => {
 const observedItems = document.querySelectorAll('.observe');
 observedItems.forEach(item => observer.observe(item));
 
+/*
+* This solves the issues of the navigation menu not appearing when the page is resized after the menu icon
+* is pressed.
+*/
 window.addEventListener('resize', () => {
     if (window.innerWidth < 1260)
         toggleMenu('hide');
