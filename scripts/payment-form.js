@@ -98,10 +98,7 @@ makePaymentFormButton.addEventListener('click', () => {
             alert('Please fill all the form fields.');
         else {
             paymentForm.style.transform = 'scale(0)';
-            transactionReceipt.style.transform = 'scale(1)';
-            showTransactionReceipt();
             downloadTransactionReceipt();
-            closeReceiptButton.style.display = 'block';
         }
     });
 });

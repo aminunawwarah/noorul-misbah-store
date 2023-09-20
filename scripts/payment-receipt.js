@@ -3,87 +3,6 @@
 * All rights reserved. 
 */
 
-/**
- * Create the content of the transaction receipt
- * This function creates a preview of the transaction receipt. The transaction receipt preview contains the
- * details entered in the payment form, and all the items purchased together with their quantity, initial price,
- * total price, the sum of the prices of all the items purchased. The information is presented in a table.
- */
-function createTransactionReceiptContent() {
-    const {customerName, customerCountry, customerPhone, customerTown, customerEmail, customerAddress} = customerInformation;
-    const transactionTable = document.createElement('table');
-    const tableHead = document.createElement('thead');
-    const tableBody = document.createElement('tbody');
-    const itemsTotalPrice = document.createElement('p');
-    const tableHeadTitles = ['Items', 'Quantity', 'Price ($)', 'Total Price ($)'];
-    customer = customerName;
-
-    for (var i = 0; i < tableHeadTitles.length; i++) {
-        const data = document.createElement('th');
-        data.innerText = tableHeadTitles[i];
-        tableHead.appendChild(data);
-    }
-    
-    for (var i = 0; i < cartContent.length; i++) {
-        var row = document.createElement('tr');
-        var data = [];
-
-        for (var j = 0; j < 4; j++) {
-            data[j] = document.createElement('td');
-            row.appendChild(data[j]);
-        }
-
-        data[0].innerText = cartContent[i].itemName;
-        data[1].innerText = cartContent[i].quantity;
-        data[2].innerText = cartContent[i].price;
-        data[3].innerText = cartContent[i].itemPrice;
-
-        for (var j = 1; j < 4; j++) {
-            data[j].setAttribute('class', 'center');
-        }
-
-        tableBody.appendChild(row);
-    }
-
-    transactionTable.appendChild(tableHead);
-    transactionTable.appendChild(tableBody);
-    transactionReceipt.innerHTML = `
-        <img class="close-receipt" src="../imgs/close.png" style="position: fixed; top: 1rem; right: 1rem; width: 1.3rem; height: 1.3rem; cursor: pointer;">
-        <div class="receipt-head">
-            <img class="receipt-head-image" src="../imgs/noorul-misbah.png" alt="Head image">
-            <div class="head-description">
-                <p>Noorul Misbah Store</p>
-                <p>noorulmisbah@noor.com</p>
-                <p>123-456-789</p>
-            </div>
-        </div>
-        <div class="customer-address">
-            <div class="address">
-                <p>${customerName}</p>
-                <p>${customerEmail}</p>
-                <p>${customerAddress}</p>
-                <p>${customerTown}, ${customerCountry}</p>
-                <p>${customerPhone}</p>
-            </div>
-            <p style="font-size: 1.2rem; font-weight: bold;">Transaction Receipt</p>
-        </div>`;
-    itemsTotalPrice.innerText = `Total Price: $${totalPrice}`;
-    itemsTotalPrice.style.margin = '2rem 0';
-    transactionReceipt.appendChild(transactionTable);
-    transactionReceipt.appendChild(itemsTotalPrice);
-    closeReceiptButton = document.querySelector('.close-receipt');
-    closeReceiptButton.addEventListener('click', () => {
-        transactionReceipt.style.display = closeReceiptButton.style.display = 'none';
-    });
-}
-
-/**
- * Show the preview of the transaction receipt
- * Once the payment form is validated, the preview of the receipt will be shown.
- */
-function showTransactionReceipt() {
-    createTransactionReceiptContent();
-}
 
 /**
  * Create the table rows
@@ -165,5 +84,3 @@ function downloadTransactionReceipt() {
 
 var customer;
 var tableRows = [];
-
-const transactionReceipt = document.querySelector('.transaction-receipt');
